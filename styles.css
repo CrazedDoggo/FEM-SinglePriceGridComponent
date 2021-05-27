@@ -1,0 +1,164 @@
+/*ATTRIBUTIONS ||*/
+
+.attribution { 
+    margin: 3em 0;
+    font-size: 1rem; text-align: center;
+    color: var(--cyan);
+}
+.attribution a { 
+    color: var(--cyan);
+}
+
+/*GENERAL ||*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: rgb(74, 190, 189);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    --main-font: 'Karla', Arial, Helvectica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--light-gray);
+    color: white;
+    font-family: var(--main-font);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/*TYPOGRAPHY ||*/
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    all:unset;
+    cursor: pointer;
+    box-sizing: inherit;
+}
+
+h1,
+h2 {
+    margin-bottom: 1em;
+}
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.2rem;
+}
+
+/*LAYOUT ||*/
+
+.card {
+    max-width: 700px;
+    margin: 2em;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "marketing marketing"
+    "cta cta"
+    "info info";
+    border-radius: 10px;
+}
+.card > section {
+    padding: 1.5em;
+}
+
+/*MARKETING ||*/
+
+.marketing {
+    grid-area: marketing;
+    color: var(--grayish-blue);
+}
+.marketing p {
+    line-height: 2;
+}
+.marketing h1 {
+    color: var(--cyan);
+}
+.subtitle {
+    font-size: 1rem;
+    color: var(--bright-yellow)
+}
+
+/*CTA ||*/
+
+.cta {
+    grid-area: cta;
+    background-color: var(--cyan);
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: .4em 0;
+}
+.rate strong {
+    font-size: 2rem;
+}
+.rate p {
+    color: hsla(204, 43%, 93%, 0.5);
+}
+
+.cta-button {
+    background-color: var(--bright-yellow);
+    box-shadow:  0px 0px 10px -5px black;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 5px;
+    margin-top: 1.5em;
+    padding: 1em;
+
+    display: block;
+    width: 100%;
+}
+
+/*INFO ||*/
+
+.info {
+    grid-area: info;
+    background-color: var(--light-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.info ul li {
+    color: rgba(255, 255, 255, 0.65);
+}
+.info ul li + li {
+    margin-top: .5em;
+}
+
+/*QUERIES ||*/
+
+@media(min-width: 550px) {
+    .card {
+        grid-template-areas: 
+        "marketing marketing"
+        "cta info";
+    }
+    .cta {
+        border-radius: 0 0 0 10px;
+    }
+    .info {
+        border-radius: 0 0 10px 0;
+    }
+}
