@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/CrazedDoggo/FEM-SinglePriceGridComponent](https://github.com/CrazedDoggo/FEM-SinglePriceGridComponent)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://crazeddoggo.github.io/FEM-SinglePriceGridComponent/](https://crazeddoggo.github.io/FEM-SinglePriceGridComponent/)
 
 ## My process
 
